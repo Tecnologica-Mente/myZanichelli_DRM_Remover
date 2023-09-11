@@ -1,0 +1,19 @@
+{
+  "name": "myZanichelli_DRM_Remover",
+  "version": "1.0.0",
+  "description": "DRM Protection Removal and Downloader for myZanichelli Platform",
+  "main": "download_kitaboo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node download_kitaboo.js"
+  },
+  "author": "Stefano",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "pdfkit": "^0.12.3",
+    "prompt-sync": "^4.1.6",
+    "svg-to-pdfkit": "^0.1.8",
+    "xml2js": "^0.4.23"
+  }
+}
