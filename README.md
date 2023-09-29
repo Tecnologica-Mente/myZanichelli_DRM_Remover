@@ -16,17 +16,22 @@ Se non si sa quale versione installare, scegliere quella a 32-bit.
 https://my.zanichelli.it/
 ed eseguire l'accesso con le proprie credenziali.
 7) Nella schermata "Preferiti" o "Adottati nelle tue scuole" dove vengono visualizzati i propri libri, cliccare su "Leggi l'ebook su" (oppure nella schermata "Tutti" cliccare su "Leggi online") in corrispondenza del libro che si vuole scaricare e attendere il caricamento dello stesso sul webreader. Premere sulla tastiera il tasto F12 per visualizzare la DevTools.
-a) Se si sta utilizzando Google Chrome, spostarsi nella scheda "Network", assicurandosi che sia spuntata la voce "Disable cache" e selezionata la voce "Fetch/XHR". Premere F5 per aggiornare la pagina. Tra i numerosi file elencati, cercare quello che nome "content.opf" e cliccare su di esso. Verranno visualizzati il percorso completo e altre informazioni.
+a) Se si sta utilizzando Google Chrome, spostarsi nella scheda "Network", assicurandosi che sia spuntata la voce "Disable cache" e selezionata la voce "Fetch/XHR". Premere F5 per aggiornare la pagina.
 b) Se si sta utilizzando Firefox, spostarsi nella scheda "Rete" e ripetere gli stessi passi del punto a).
 c) Se si sta utilizzando Microsoft Edge, spostarsi nella scheda "Rete" e ripetere gli stessi passi del punto a).
-8) Andare sul menù di myZanichelli DRM Remover e premere il tasto 2 sulla tastiera. Quando richiesto inserire come ebookID il numero presente 2 volte nel campo "Request URL" https://webreader.zanichelli.it/########/html5/########/OPS/content.opf (viene indicato al posto dei caratteri con ########) e come Cookie il valore riportato più in basso nel campo omonimo "Cookie" facendo attenzione a selezionare tutto il suo contenuto.
-9) Attendere il download del libro. Il PDF sbloccato del libro verrà scaricato nella stessa cartella dove si trova il file "download_kitaboo.js".
-10) Per scaricare gli altri libri sarà sufficiente ripetere i passi a partire dal punto 7).
-11) Per scaricare i libri presenti in Booktab, accessibile on-line al seguente link:
+8) Nella DevTools cliccare sulla scheda "Console", incollare il seguente comando:
+window.angularComponentRef.render.settings.encResource
+e premere Invio.
+Se come risultato viene restituito un valore che non è "undefined", copiare la stringa di output senza doppi apici.
+9) Andare sul menù di myZanichelli DRM Remover e premere il tasto 2 sulla tastiera. Quando richiesto se il libro è crittografato, se nel passo 8) il valore è "undefined" rispondere no (n), altrimenti rispondere si (y) e incollare la chiave di crittografia copiata precedentemente e premere Invio.
+10) Tornare nella scheda "Network" della DevTools e tra i numerosi file elencati, cercare quello che nome "content.opf" e cliccare su di esso. Verranno visualizzati il percorso completo e altre informazioni. Sul menù di myZanichelli DRM Remover, quando richiesto, inserire come ebookID il numero presente 2 volte nel campo "Request URL" https://webreader.zanichelli.it/########/html5/########/OPS/content.opf (viene indicato al posto dei caratteri con ########) e come Cookie il valore riportato più in basso nel campo omonimo "Cookie" facendo attenzione a selezionare tutto il suo contenuto.
+11) Attendere il download del libro. Il PDF sbloccato del libro verrà scaricato nella stessa cartella dove si trova il file "download_kitaboo.js".
+12) Per scaricare gli altri libri sarà sufficiente ripetere i passi a partire dal punto 7).
+13) Per scaricare i libri presenti in Booktab, accessibile on-line al seguente link:
 https://web-booktab.zanichelli.it/BooktabWeb/
 basterà invece andare sul menù di myZanichelli DRM Remover e premere il tasto 3 sulla tastiera. Inserendo, quando richiesto, i propri dati di accesso alla piattaforma myZanichelli, saranno elencati i libri disponibili. Digitare l'ISBN del libro che si vuole scaricare tra quelli elencati per avviare il download. Il PDF sbloccato del libro verrà scaricato nella stessa cartella dove si trova il file "download_booktab.py".
-12) Per scaricare gli altri libri sarà sufficiente inserire un altro ISBN per il successivo libro.
-13) Per uscire dal programma basterà andare sul menù di myZanichelli DRM Remover e premere il tasto 5 sulla tastiera.
+14) Per scaricare gli altri libri sarà sufficiente inserire un altro ISBN per il successivo libro.
+15) Per uscire dal programma basterà andare sul menù di myZanichelli DRM Remover e premere il tasto 5 sulla tastiera.
 
 Divertitevi ;-)
 
@@ -51,18 +56,23 @@ If you don't know which version to install, choose the 32-bit version.
 6) Connect to the site:
 https://my.zanichelli.it/
 and log in with your credentials.
-7) On the "Favorites" or "Adopted in your schools" screen where your books are displayed, click on "Read the ebook on" (or on the "All" screen click on "Read online") next to the book you want to download and wait for it to load on the webreader. Press the F12 key on your keyboard to view DevTools.
-a) If you are using Google Chrome, move to the "Network" tab, making sure that "Disable cache" is checked and "Fetch/XHR" is selected. Press F5 to refresh the page. Among the numerous files listed, look for the one that name "content.opf" and click on it. The full path and other information will be displayed.
-b) If you are using Firefox, go to the "Network" tab and repeat the same steps in point a).
-c) If you are using Microsoft Edge, move to the "Network" tab and repeat the same steps in point a).
-8) Go to the myZanichelli DRM Remover menu and press the 2 key on the keyboard. When prompted, enter the number present twice in the "Request URL" field as ebookID https://webreader.zanichelli.it/########/html5/########/OPS/content.opf (is indicated instead of the characters with ########) and as Cookie the value shown below in the homonymous "Cookie" field, taking care to select all its contents.
-9) Wait for the book to download. The unlocked PDF of the book will be downloaded to the same folder where the "download_kitaboo.js" file is located.
-10) To download the other books, simply repeat the steps starting from point 7).
-11) To download the books in Booktab, accessible online at the following link:
+7) In the "Favorites" or "Adopted in your schools" screen where your books are displayed, click on "Read the ebook on" (or in the "All" screen click on "Read online") corresponding to the book you want wants to download and wait for it to load on the webreader. Press the F12 key on your keyboard to view DevTools.
+a) If you are using Google Chrome, move to the "Network" tab, making sure that "Disable cache" is checked and "Fetch/XHR" is selected. Press F5 to refresh the page.
+b) If you are using Firefox, move to the "Network" tab and repeat the same steps as in point a).
+c) If you are using Microsoft Edge, move to the "Network" tab and repeat the same steps as in point a).
+8) In DevTools click on the "Console" tab, paste the following command:
+window.angularComponentRef.render.settings.encResource
+and press Enter.
+If the result returns a value that is not "undefined", copy the output string without double quotes.
+9) Go to the myZanichelli DRM Remover menu and press the 2 key on the keyboard. When asked if the book is encrypted, if in step 8) the value is "undefined" answer no (n), otherwise answer yes (y) and paste the encryption key copied previously and press Enter.
+10) Go back to the "Network" tab of DevTools and among the numerous files listed, look for the one called "content.opf" and click on it. The full path and other information will be displayed. On the myZanichelli DRM Remover menu, when requested, enter the number present twice in the "Request URL" field as the ebookID https://webreader.zanichelli.it/########/html5/##### ###/OPS/content.opf (it is indicated in place of the characters with ########) and as Cookie the value shown further down in the "Cookie" field of the same name, making sure to select all its contents.
+11) Wait for the book to download. The unlocked PDF of the book will be downloaded to the same folder where the "download_kitaboo.js" file is located.
+12) To download the other books, simply repeat the steps starting from point 7).
+13) To download the books in Booktab, accessible online at the following link:
 https://web-booktab.zanichelli.it/BooktabWeb/
 instead, simply go to the myZanichelli DRM Remover menu and press the 3 key on the keyboard. By entering, when requested, your access data to the myZanichelli platform, the available books will be listed. Type the ISBN of the book you want to download from those listed to start the download. The unlocked PDF of the book will be downloaded to the same folder where the "download_booktab.py" file is located.
-12) To download the other books, simply enter another ISBN for the next book.
-13) To exit the program, simply go to the myZanichelli DRM Remover menu and press the 5 key on the keyboard.
+14) To download the other books, simply enter another ISBN for the next book.
+15) To exit the program, simply go to the myZanichelli DRM Remover menu and press the 5 key on the keyboard.
 
 Enjoy ;-)
 
