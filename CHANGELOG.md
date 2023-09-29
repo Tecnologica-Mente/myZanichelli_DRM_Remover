@@ -1,6 +1,16 @@
 # Change Log
 This is a full list of changes for each release of myZanichelli_DRM_Remover_AIO.
  
+## [1.1.0] - 2023-09-29
+ 
+### Added
+ 
+### Changed
+ - Upgraded Kitaboo code with encryption key field
+ 
+### Fixed
+ 
+----------------------------------------------------------------------------------------
 ## [1.0.0] - 2023-09-11
   
 First program version.
