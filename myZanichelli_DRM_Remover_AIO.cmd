@@ -24,14 +24,14 @@
 
 cls
 color 07
-title  myZanichelli DRM Remover AIO v1.0.0
+title  myZanichelli DRM Remover AIO v1.1.0
 mode 100, 30
 set "mzdrmrtemp=%SystemRoot%\Temp\__MZDRMR"
 if exist "%mzdrmrtemp%\.*" rmdir /s /q "%mzdrmrtemp%\" %nul%
 
 echo:
 echo:
-echo:             Welcome to myZanichelli DRM Remover AIO v1.0.0
+echo:             Welcome to myZanichelli DRM Remover AIO v1.1.0
 echo:
 echo:       ______________________________________________________________________________________
 echo:
